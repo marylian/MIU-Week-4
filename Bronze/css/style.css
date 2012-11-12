@@ -1,0 +1,68 @@
+/*
+ Name: Marylia Nieves
+ Title: Project 1 MiU
+ Term:1211
+ Date: 10-25-12
+ */
+
+body { 
+	/*background-color: #B8B8B8;*/
+	background:-webkit-gradient( linear, left top, left bottom, from(#447799), to(#aacccc));}
+
+
+
+h2{
+	margin: 10px;
+	border: 2px solid #FFE475;
+	padding: 7px;
+	background:#88aaaa;
+	font-family: "Rockwell", Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 20px;
+	text-align: center;	
+}
+
+h3{
+	margin: 3px;
+	padding: 3px;
+	font-family: "New York" Helvetica, sans-serif;
+	font-weight:bold;
+	font-size: 15px;
+	
+}
+
+fieldset {
+		border: 3px solid #FFE475;
+}	
+
+legend {
+	font-family:Helvetica;
+	font-size: 18px;
+	color: #282828;
+	text-align: left;
+	font-weight: bold;
+	text-transform: capitalize;
+	padding: 5px
+}
+
+ul {
+	margin: 1px 1px;
+	color: #282828;
+	margin-bottom: 10px;
+}
+
+li {
+	font-family:Helvetica;
+	font-size: 14px;
+}	
+
+input {
+    border: 1px solid #006;
+    background: #F2F2F2;
+}
+
+
+a:visited {color:purple;}
+a:hover {color:gray;}
+a:active {color:black;}
+

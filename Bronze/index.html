@@ -1,0 +1,167 @@
+<!doctype html>  
+<!--Marylia Nieves
+	MIU 1211
+	Project 3-->
+
+<html lang="en">
+<head>
+	
+		<meta charset="utf-8">
+		<meta name="description" content="A web app that helps busy teachers keep track of their weekly tasks" />
+		<title>Weekly Teacher Tasks</title>
+		
+		<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+		<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Mobile IE needs ClearType for smoothing fonts -->
+		<meta http-equiv="cleartype" content="on">
+		<!-- StyleSheets under here -->
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" href="css/style.css"/>	
+		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
+		<script src="js/libs/modernizr.custom.min.js"></script>
+</head>
+<body>
+	<div data-role="page" id="home" data-theme="e">
+		<div data-role="header" data-position="fixed" data-theme="a">
+			<h1>Weekly Teacher Tasks</h1>
+		</div>
+		<!--Feature/CTA-->
+		<div>
+			<a href="additem.html" data-ajax="false" id="taskForm"><img height="180" width="320" src="images/ID-10092376.jpg"></a>
+		</div>
+			
+		<!--Browse Categories-->
+		<!--<div>
+		<!--Dont delete this line--><!--<ul data-role="listview" data-inset="true" data-theme="e">
+				<li data-role="list-divider">Task Feed</li>
+				<li><a href="#feed" data-theme="e">Click here for task feed.</a>
+				</li>
+				<li data-role="list-divider">Browse Categories</li>
+				<li data-icon="plus"><a href="error.html" data-theme="e" data-ajax="false">Grade Papers</a></li>
+				<li data-icon="check"><a href="error.html" data-theme="e" data-ajax="false">Contact Parents</a></li>
+				<li data-icon="grid"><a href="error.html" data-theme="e" data-ajax="false">Attend Meetings</a></li>
+				<li data-icon="search"><a href="error.html" data-theme="e" data-ajax="false">Write Lesson Plans</a></li>
+				<li data-icon="gear"><a href="error.html" data-theme="e" data-ajax="false">Create a Test</a></li>
+				<li data-icon="star"><a href="error.html" data-theme="e" data-ajax="false">Create a Project</a></li>
+			</ul>
+		</div>-->
+		<div>			
+				<h2>Browse Categories</h2>
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<center><div class="ui-bar ui-bar-e">
+							<img src="images/ID-10094072.gif"/>
+							<div>
+								<a href="error.html" data-ajax="false">Grade Papers</a>
+							</div> 
+						</div></center>
+					</div>
+
+					<div class="ui-block-b">
+						<center><div class="ui-bar ui-bar-e">
+								<img src="images/ID-10060589.gif"/>
+								<div>
+									<a href="error.html" data-ajax="false">Contact Parents</a>
+								</div>
+						</div></center>
+					</div>
+
+					<div class="ui-block-c">
+						<center><div class="ui-bar ui-bar-e">
+							<img src="images/ID-10081695.gif"/>
+							<div>
+								<a href="error.html" data-ajax="false">Attend Meetings</a>
+							</div>
+						</div></center>
+					</div>
+					
+					<div class="ui-block-a">
+						<center><div class="ui-bar ui-bar-e">
+							<img src="images/ID-10040554.gif"/>
+							<div>
+								<a href="error.html" data-ajax="false">Write Lesson Plans</a>
+							</div>
+						</div></center>
+					</div>
+
+					<div class="ui-block-b">
+						<center><div class="ui-bar ui-bar-e">
+								<img src="images/ID-10082342.gif"/>
+								<div>
+									<a href="error.html" data-ajax="false">Create a Test</a>
+								</div>							
+						</div></center>
+					</div>
+
+					<div class="ui-block-c">
+						<center><div class="ui-bar ui-bar-e">
+								<img src="images/ID-10062043.gif"/></a>
+								<div>
+									<a href="error.html" data-ajax="false">Create a Project</a>
+								</div>
+						</div></center>
+					</div>
+				</div>
+		</div>
+		
+	<!--search-->
+		<h3>Filter Tasks</h3>
+		<div data-role="content">
+			<ul data-role="listview" data-inset="true" data-filter="true">
+				<div data-role="footer" data-position="fixed" data-theme="a">
+					<div data-role="navbar">
+						<ul>
+							<li><a href="#home" data-icon="home">Home</a></li>
+							<li><a href="../Gold/index.html" data-ajax="false" data-icon="star">Gold App</a></li>
+							<li><a href="about.html" data-ajax="false" data-icon="check">About Page</a></li>
+							<li><a href="additem.html" data-ajax="false" data-icon="plus">Add a Task</a></li>
+						</ul>
+					</div>
+				</div>
+			</ul>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false" data-icon="star">Gold App</a></li>
+					<li><a href="about.html" data-ajax="false" data-icon="check">About Page</a></li>
+					<li><a href="additem.html" data-ajax="false" data-icon="plus">Add a Task</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="feed" data-add-back-btn="true" data-theme="e">
+		<div data-role="header" data-position="fixed">
+			<h3>Tasks</h3>
+		</div>
+		<div data-role="Content">
+			<li>Task Feed:</li><br>
+			<ul>Grade Papers<br>11-01-2012 (Today)</ul>
+			<ul>Contact Parents<br>10-31-2012 (1 day ago)</ul>
+			<ul>Attend Meetings<br>10-26-2012 (5 days ago)</ul>
+			<ul>Write Lesson Plans<br>10-10-2012 (21 days ago)</ul>
+			<ul>Create a test<br>10-01-2012 (Month ago)</ul>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#home" data-icon="home">Home</a></li>
+					<li><a href="../Gold/index.html" data-ajax="false" data-icon="star">Gold App</a></li>
+					<li><a href="about.html" data-ajax="false" data-icon="check">About Page</a></li>
+					<li><a href="additem.html" data-ajax="false" data-icon="plus">Add a Task</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+
+	<!-- JavaScript under here -->
+	<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+	<script type="text/javascript" src="js/main.js>"</script>
+</body>
+</html>

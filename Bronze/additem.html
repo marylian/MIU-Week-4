@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+ <!-- Marylia Nieves MIU 1211  
+ 	Assignment 3 Add Item Page. -->
+ 	
+<!-- HTML Tag-->
+<html>
+	<!--Document Head-->
+	<head>
+			<!--Meta Content-->
+			<meta charset="UTF-8" />
+			<meta name="keywords" content="html5, mobile development, Full Sail University, Teacher, Plans" />
+			<meta name="description" content="My first assignment for VFW" />
+	   		<meta name="robots" content="index, follow" />
+	   		<meta name="viewport" content="user-scalable=no, width=device-width" />
+	    	<meta name="HandheldFriendly" content="True" />
+	    	<link href="css/style.css" rel="stylesheet" />
+
+	    	<!--Document Title-->
+	 		 <title>Weekly Teacher Tasks</title>
+
+	</head>
+		<!--Document Body-->
+	<body>
+		<h2> Weekly Teacher Tasks</h2>
+		<form action="#" method="post" id="taskForm"> 
+			<fieldset>
+				<legend>Add a Task</legend>
+				<ul	id="errors"></ul>
+				<ul id="questions"></ul>
+					<li>Please Choose a Day:
+						<ul>
+							<li><input	name="weekday" type="radio" value="Monday" id="monday"/><label for="monday">Monday</label></li>
+							<li><input	name="weekday" type="radio" value="Tuesday" id="tuesday"/><label for="tuesday">Tuesday</label></li>
+							<li><input	name="weekday" type="radio" value="Wednesday" id="wednesday"/><label for="wednesday">Wednesday</label></li>
+							<li><input	name="weekday" type="radio" value="Thursday" id="thursday"/><label for="thursday">Thursday</label></li>
+							<li><input	name="weekday" type="radio" value="Friday" id="friday"/><label for="friday">Friday</label></li>
+						</ul>
+					</li>
+						<li><label for="sub">* Subject:</label><input type="text" required="required" id="sub"/></li>
+						<li><label for="period">* Period:</label><input type="text" required="required" id="period"/></li>
+					<li>
+						Grade Level:<input type="range" name="range1" min="1" max="12" step="1" value="0" id="grade"/>
+					</li>					
+					<li id="categories"><label for="categories"> Task Categories</label> 
+<!--				<select>
+							<optgroup label="Choose a task">
+							<option value="Grade Papers">Grade Papers</option>
+								<option value="Contact Parents">Contact Parents</option>
+								<option value="Meetings">Meetings</option>
+								<option value="Write Lesson Plans">Write Lesson Plans</option>
+								<option value="Test">Test</option>
+								<option value="Projects">Projects</option>
+								<option value="Other">Other</option>	
+							</optgroup>
+						</select>-->
+					</li>
+					<li>
+						<label for="dueDate">Due Date: </label><input type="date" id="dueDate" name="Due Date" />	
+					</li>
+					<li>
+						<label for="comments">My Notes:</label><textarea id="comments">Type notes here.</textarea>
+					</li>
+					<br><i>'*' fields are required.</i>
+			</fieldset>
+			<input type="button" id="taskSubmit" value="Submit my task!"/>	
+		</form>
+		<nav>
+			<a href="#" id="clearTask">Clear Stored Data</a>
+			<a href="#" id="displayTask">Display Data</a>
+			<a href="additem.html" id="addTask" style="display: none;">Add a task</a>
+		</nav>
+		<script type="text/javascript" src="js/json.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+	</body> 
+</html>
