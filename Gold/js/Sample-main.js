@@ -8,17 +8,23 @@
 	//code needed for home page goes here
 });
 */
-
-
 $('#additem').on('pageinit', function(){
 		var myForm = $('#taskForm');
-			myForm.validate();
-
+			myForm.validate({
+        invalidHandler: function(form, validator){
+        },
+        submitHandler: function(){
+            var data = myForm.serializeArray();
+            console.log(data);
+            storeData(data);
+        }
+    });
 });
-
-
+$("#additem").on("pagecreate", function(){
+    makeCats();
+});
 	//getElementById Function
-	 var id=function(x){
+	 var ge=function(x){
 	 	var theElement=document.getElementById(x);
 	 	return theElement;
 	 };
@@ -27,7 +33,8 @@ $('#additem').on('pageinit', function(){
 	function makeCats(){
 		 var formTag=document.getElementsByTagName("form");
 		 selectLi=ge('categories');
-		 makeSelect=document.createElement('select');
+		 var makeSelect=document.createElement('select');
+		 makeSelect.setAttribute("class", "required select");
 		 makeSelect.setAttribute("id", "category");
 		 for(i=0; i<taskCategories.length; i++){
 		 	var makeOption=document.createElement('option');
@@ -52,7 +59,7 @@ $('#additem').on('pageinit', function(){
  	
 	var x=document.getElementsByName("x");
 	
-	var toggleControls=function(m){
+	/*var toggleControls=function(m){
 		switch(m){
 			case "on":
 				$("#taskForm").style.display=("none");
@@ -70,7 +77,7 @@ $('#additem').on('pageinit', function(){
 			default:
 				return false;
 		}
-	};
+	};*/
 
 
 	var storeData=function(key){
@@ -89,15 +96,16 @@ $('#additem').on('pageinit', function(){
 		getSelectedCheckbox();
 		var item				={};
 			item.checkbox     	=["Choose a day:", $("#dayValue").val()];
-			item.sub			=["Subject:", $("sub").value()];
-			item.period			=["Period:", $("period").value()];
-			item.grade			=["Grade Level:", $("grade").value()];
-			item.category		=["Categories:", $("category").value()];
-			item.date			=["Due Date:", $("dueDate").value()];
-			item.comments		=["My Notes:", $("comments").value()];
+			item.sub			=["Subject:", $("#sub").val()];
+			item.period			=["Period:", $("#period").val()];
+			item.grade			=["Grade Level:", $("#grade").val()];
+			item.category		=["Categories:", $("#category").val()];
+			item.date			=["Due Date:", $("#dueDate").val()];
+			item.comments		=["My Notes:", $("#comments").val()];
 		//Save data into Local Storage: Use Stringify to convert our object to a string.
 		localStorage.setItem(id, JSON.stringify(item));
 		alert("Task Saved!");
+		location.reload();
 };
 
 var getImage=function(catName, makeSubList){
@@ -110,7 +118,7 @@ var getImage=function(catName, makeSubList){
 
 
 var getData=function(){
-	toggleControls("on");
+	//toggleControls("on");
 	if(localStorage.length===0){
 		alert("There is no task to display in Local Storage so default data was added.");
 		autoFillData();
@@ -119,12 +127,13 @@ var getData=function(){
 		document.getElementById("items").innerHTML="";
 	}
 		//write data from local storage to the browser.
-		var makeDiv=document.createElement('div');
+		var makeDiv=document.getElementById('itemList');
+		makeDiv.setAttribute("data-role", "content");
 		makeDiv.setAttribute("id", "cats");
 		var makeList=document.createElement('ul');
 		makeDiv.appendChild(makeList);
 		//document.body.appendChild(makeDiv);
-		$("#showData").append(makeDiv)
+		$("#itemList").append(makeDiv)
 		ge('cats').style.display="block";
 		for(var i=0, len=localStorage.length; i<len; i++){ 
 			var makeli=document.createElement('li');
@@ -181,12 +190,12 @@ var getData=function(){
 		linksLi.appendChild(deleteLink);
 	};
 	
-	var editItem=function(){
+	var editItem=function(key){
 		//Grab the data from our item from Local Storage.
 		var value=localStorage.getItem(this.key);
 		var item=JSON.parse(value);
 		//Show the forms
-		toggleControls("off");
+		//toggleControls("off");
 		//Populate the form fields with the current localStorage values.
 		var checkbox=document.forms[0].weekday;
 		for(var i=0;i<checkbox.length; i++){
@@ -202,13 +211,11 @@ var getData=function(){
 		$("#comments").val(item.comments [1]);
 
 		//Remove the inital listener from the input 'save contact' button.
-		save.removeEventListener("click", storeData);
 		//Change Submit Button Value to Edit Button
 		$("#taskSubmit").value="Edit Task";
 		var editSubmit=$("#taskSubmit");
 		//Save the key value established in this function as a property of the editSubmit event
 		//so we can use that value when we save the data we edited.
-		editSubmit.addEventListener("click", validate);
 		editSubmit.key=this.key;
 	};
 	
@@ -242,7 +249,7 @@ var getData=function(){
 	};
 	
 	
-	function validate(e){
+	/*function validate(e){
 		//Define the elements we want to check
 		var getSub=ge('sub');
 		var getPeriod=ge('period');
@@ -290,25 +297,25 @@ var getData=function(){
 			storeData(this.key);  
 		}
 
-	}
+	}*/
 
 
 	//Variable defaults
 	var taskCategories=["Choose a task", "Grade", "Contact", "Meetings", "Lesson", "Tests", "Projects", "Others"],
 		dayValue;
-		errMsg=ge('errors');
+		//errMsg=ge('errors');
 
-	makeCats();
+	
 
 	//Set Link and Submit Click Events 
-	var displayTask=$("#displayTask"); 
+	/*var displayTask=$("#displayTask"); 
 	displayTask.addEventListener("click", getData); 
 	var clearLink=$("#clearTask");
 	clearLink.addEventListener("click", clearLocal);
 	var save=$("#taskSubmit");
-	save.addEventListener("click", validate);
+	save.addEventListener("click", validate);*/
 //});
 
 	$("#displayTask").on("click", getData);
 	$("#clearTask").on("click", clearLocal);
-	$("#taskSubmit").on("click", storeData);
+	$("taskSubmit").on("click", storeData);

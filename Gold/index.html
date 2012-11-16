@@ -1,7 +1,7 @@
 
 <!--Marylia Nieves
 	MIU 1211
-	Project 3-->
+	Project 4-->
 
 <html lang="en">
 
@@ -23,6 +23,11 @@
 		<link rel="stylesheet" href="css/style.css"/>	
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		
+		<script type="text/javascript" src="js/Sample-main.js"></script>
+		<script type="text/javascript" src="js/json.js"></script>
 	</head>
 	<body>
 		<div data-role="page" id="home" data-theme="e">
@@ -31,7 +36,7 @@
 			</div>
 		<!--Feature/CTA-->
 			<div>
-				<a href="#additem" data-theme="e" id="taskForm"><img height="180" width="320" src="images/ID-10092376.jpg"></a>
+				<a href="#additem" data-theme="e"><img height="180" width="320" src="images/ID-10092376.jpg"></a>
 			</div>
 		<!--Search-->	
 			<div data-role="content">
@@ -110,10 +115,11 @@
 					<div data-role="button" id="displayTask" data-inline="true" data-icon="star" data-iconpos="right" data-theme="e">Display Tasks</div>
 				</div>
 				
-				
+			<div data-role="content">
 				<form action="" method="post" id="taskForm" name="taskForm">
 					<fieldset data-role="controlgroup" data-mini="true">
 						<legend>Add a Task</legend>
+						<li><span class="required"><span>* </span>Required Fields</span></li>
 						<ul	id="errors"></ul>
 						<ul id="questions"></ul>
 						<ul>
@@ -144,11 +150,11 @@
 						<ul>
 							<fieldset data-role="controlgroup" data-mini="true">
 								<li>
-									<label for="sub">Subject:</label><ul><input type="text" name="sub" id="sub" class="required" placeholder="Enter Subject Name"/></ul>
+									<label for="sub">* Subject:</label><ul><input type="text" name="sub" id="sub" class="required" placeholder="Enter Subject Name"/></ul>
 										<ul>
 												<font size="2"><i>Eg: Math</i></font>
 										</ul>
-									<label for="period">Period:</label><ul><input type="text" id="period" placeholder="Enter Period Number"/></ul>
+									<label for="period">* Period:</label><ul><input type="text" id="period" class="required" placeholder="Enter Period Number"/></ul>
 										<ul><font size="2"><i>Eg: 2, 3...</i></font></ul>								
 								</li>							
 							</fieldset>
@@ -179,10 +185,13 @@
 							</fieldset>
 						</ul>
 					</div>
-					<input type="submit" id="taskSubmit" data-inline="true" value="Submit" data-icon="check" data-theme="b"/>
+					<input type="submit" id="taskSubmit" name="taskSubmit" data-inline="true" value="Submit" data-icon="check" data-theme="b"/>
 					<!--<a href="#home" data-inline="true" id="taskSubmit" data-role="button" data-theme="b" data-icon="check"/>Submit</a>-->
 					<a href="#home" data-inline="true" data-role="button" data-theme="w" data-icon="delete">Cancel</a>
 				</form>
+			</div>
+				<div id="itemList" data-role="fieldcontain"></div>
+
 			
 			
 			<div data-role="footer" data-position="fixed" data-theme="a">
@@ -390,10 +399,6 @@
 	
 	
 		<!-- JavaScript under here -->
-		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 		<script type="text/javascript" src="js/libs/jquery.validate.min.js"></script>
-		<script type="text/javascript" src="js/libs/modernizr.custom.min.js"></script>
-		<script type="text/javascript" src="js/Sample-main.js>"</script>
 	</body>
 </html>
