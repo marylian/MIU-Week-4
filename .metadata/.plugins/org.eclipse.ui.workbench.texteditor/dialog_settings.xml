@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="true" key="wrap"/>
+		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="wholeword"/>
+		<item value="&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css&quot; /&gt;" key="selection"/>
+		<list key="findhistory">
+			<item value="&lt;link rel=&quot;stylesheet&quot; href=&quot;http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css&quot; /&gt;"/>
+			<item value="data-theme"/>
+			<item value="create task"/>
+			<item value="about the app"/>
+			<item value="grade papers"/>
+			<item value="error"/>
+			<item value="align=&quot;center&quot;"/>
+			<item value="error page"/>
+		</list>
+	</section>
+</section>

@@ -1,7 +1,7 @@
 <!doctype html>  
 <!--Marylia Nieves
 	MIU 1211
-	Project 3-->
+	Project 4-->
 
 <html lang="en">
 <head>
@@ -18,12 +18,13 @@
 		<meta http-equiv="cleartype" content="on">
 		<!-- StyleSheets under here -->
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-		<link rel="stylesheet" href="css/style.css"/>	
+		<link rel="stylesheet" href="css/themes/themebronze2.css"/>	
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" /> 
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
 </head>
 <body>
-	<div data-role="page" id="home" data-theme="e">
+	<div data-role="page" id="home" data-theme="a">
 		<div data-role="header" data-position="fixed" data-theme="a">
 			<h1>Weekly Teacher Tasks</h1>
 		</div>
@@ -31,44 +32,28 @@
 		<div>
 			<a href="additem.html" data-ajax="false" id="taskForm"><img height="180" width="320" src="images/ID-10092376.jpg"></a>
 		</div>
-			
-		<!--Browse Categories-->
-		<!--<div>
-		<!--Dont delete this line--><!--<ul data-role="listview" data-inset="true" data-theme="e">
-				<li data-role="list-divider">Task Feed</li>
-				<li><a href="#feed" data-theme="e">Click here for task feed.</a>
-				</li>
-				<li data-role="list-divider">Browse Categories</li>
-				<li data-icon="plus"><a href="error.html" data-theme="e" data-ajax="false">Grade Papers</a></li>
-				<li data-icon="check"><a href="error.html" data-theme="e" data-ajax="false">Contact Parents</a></li>
-				<li data-icon="grid"><a href="error.html" data-theme="e" data-ajax="false">Attend Meetings</a></li>
-				<li data-icon="search"><a href="error.html" data-theme="e" data-ajax="false">Write Lesson Plans</a></li>
-				<li data-icon="gear"><a href="error.html" data-theme="e" data-ajax="false">Create a Test</a></li>
-				<li data-icon="star"><a href="error.html" data-theme="e" data-ajax="false">Create a Project</a></li>
-			</ul>
-		</div>-->
-		<div>			
+		<div data-theme="e">			
 				<h2>Browse Categories</h2>
-				<div class="ui-grid-b">
+				<div class="ui-grid-b" data-theme="b">
 					<div class="ui-block-a">
 						<center><div class="ui-bar ui-bar-e">
 							<img src="images/ID-10094072.gif"/>
-							<div>
+							<div data-theme="a">
 								<a href="error.html" data-ajax="false">Grade Papers</a>
 							</div> 
 						</div></center>
 					</div>
 
 					<div class="ui-block-b">
-						<center><div class="ui-bar ui-bar-e">
+						<center><div class="ui-bar ui-bar-e" data-theme="a">
 								<img src="images/ID-10060589.gif"/>
-								<div>
+								<div data-theme="a">
 									<a href="error.html" data-ajax="false">Contact Parents</a>
 								</div>
 						</div></center>
 					</div>
 
-					<div class="ui-block-c">
+					<div class="ui-block-c" data-theme="a">
 						<center><div class="ui-bar ui-bar-e">
 							<img src="images/ID-10081695.gif"/>
 							<div>
@@ -77,7 +62,7 @@
 						</div></center>
 					</div>
 					
-					<div class="ui-block-a">
+					<div class="ui-block-a" data-theme="a">
 						<center><div class="ui-bar ui-bar-e">
 							<img src="images/ID-10040554.gif"/>
 							<div>
@@ -86,7 +71,7 @@
 						</div></center>
 					</div>
 
-					<div class="ui-block-b">
+					<div class="ui-block-b" data-theme="a">
 						<center><div class="ui-bar ui-bar-e">
 								<img src="images/ID-10082342.gif"/>
 								<div>
@@ -95,7 +80,7 @@
 						</div></center>
 					</div>
 
-					<div class="ui-block-c">
+					<div class="ui-block-c" data-theme="a">
 						<center><div class="ui-bar ui-bar-e">
 								<img src="images/ID-10062043.gif"/></a>
 								<div>
@@ -108,9 +93,9 @@
 		
 	<!--search-->
 		<h3>Filter Tasks</h3>
-		<div data-role="content">
+		<div data-role="content" data-theme="c">
 			<ul data-role="listview" data-inset="true" data-filter="true">
-				<div data-role="footer" data-position="fixed" data-theme="a">
+				<div data-role="footer" data-position="fixed">
 					<div data-role="navbar">
 						<ul>
 							<li><a href="#home" data-icon="home">Home</a></li>
@@ -123,7 +108,7 @@
 			</ul>
 		</div>
 
-		<div data-role="footer" data-position="fixed">
+		<div data-role="footer" data-position="fixed" data-theme="b">
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#home" data-icon="home">Home</a></li>
@@ -134,7 +119,7 @@
 			</div>
 		</div>
 	</div>
-	<div data-role="page" id="feed" data-add-back-btn="true" data-theme="e">
+	<div data-role="page" id="feed" data-add-back-btn="true" data-theme="b">
 		<div data-role="header" data-position="fixed">
 			<h3>Tasks</h3>
 		</div>
