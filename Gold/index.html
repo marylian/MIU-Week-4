@@ -1,3 +1,4 @@
+
 <!--Marylia Nieves
 	MIU 1211
 	Project 4-->
@@ -18,8 +19,10 @@
 		<!-- Mobile IE needs ClearType for smoothing fonts -->
 		<meta http-equiv="cleartype" content="on">
 		<!-- StyleSheets under here -->
-		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
-		<link rel="stylesheet" href="css/style.css"/>	
+		<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />-->
+		<link rel="stylesheet" href="css/themes/theme2.css"/>
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile.structure-1.2.0.min.css" />
+		<!--		<link rel="stylesheet" href="css/style.css"/>	
 		<!-- JavaScript is normally at the end of the body, except for Modernizr which enables HTML5 elements & feature detects -->
 		<script src="js/libs/modernizr.custom.min.js"></script>
 		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
@@ -29,59 +32,59 @@
 		<script type="text/javascript" src="js/json.js"></script>
 	</head>
 	<body>
-		<div data-role="page" id="home" data-theme="e">
-			<div data-role="header" data-position="fixed" data-theme="a">
+		<div data-role="page" id="home">
+			<div data-role="header" data-position="fixed" data-theme="c">
 				<h1>Weekly Teacher Tasks</h1>
 			</div>
 		<!--Feature/CTA-->
-			<div>
-				<a href="#additem" data-theme="e"><img height="180" width="320" src="images/ID-10092376.jpg"></a>
+			<div data-theme="a">
+				<a href="#additem"><img height="180" width="320" src="images/ID-10092376.jpg"></a>
 			</div>
 		<!--Search-->	
-			<div data-role="content">
+			<div data-role="content" data-theme="a">
 				<ul data-role="listview" data-inset="true" data-filter="true">
 		
 		<!--Browse Categories-->
-					<li data-role="list-divider">Browse Categories</li>
-						<li><a href="#grade" data-theme="e">
+					<li data-role="list-divider" >Browse Categories</li>
+						<li><a href="#grade">
 							<img src="images/ID-10094072.gif">
 					<!--<li><a href="error.html" data-theme="e"  data-ajax="false"> -->
 							<h3>Grade Papers</h3>
 							<p>Check for student understanding.</p>
 					</a></li>
 					<!-- <li><a href="#contact" data-theme="e"> -->
-					<li><a href="#error" data-theme="e" data-ajax="false" data-add-back-btn="true">
+					<li><a href="#error" data-ajax="false" data-add-back-btn="true">
 						<img src="images/ID-10060589.gif">
 							<h3>Contact Parents</h3>
 							<p>Discuss upcoming events, questions and student progress.</p>
 					</a></li>
 					<!-- <li><a href="#meetings" data-theme="e"> -->
-					<li><a href="#error" data-theme="e" data-ajax="false">
+					<li><a href="#error" data-ajax="false">
 						<img src="images/ID-10081695.gif">
 							<h3>Attend Meetings</h3>
 							<p>Keep track of all the meetings you need to attend.</p>
 					</a></li>
 					<!-- <li><a href="#write" data-theme="e"> -->
-					<li><a href="#error" data-theme="e" data-ajax="false">
+					<li><a href="#error" data-ajax="false">
 						<img src="images/ID-10040554.gif">
 							<h3>Write Lesson Plans</h3>
 							<p>Write your lesson plans or jot down ideas for lessons.</p>
 					</a></li>
 					<li data-role="list-divider">Let's get creative</li>
 					<!-- <li><a href="#test" data-theme="e"> -->
-					<li><a href="#error" data-theme="e">
+					<li><a href="#error" >
 						<img src="images/ID-10082342.gif">
 							<h3>Create a Test</h3>
 							<p>Create assessments or worksheets.</p>
 					</a></li>
 					<!-- <li><a href="#project" data-theme="e"> -->
-					<li><a href="#error" data-theme="e" data-ajax="false">
+					<li><a href="#error" data-ajax="false">
 						<img src="images/ID-10062043.gif"><h3>Create a Project</h3>
 						<p>Implement project ideas for students.</p>
 					</a></li>
 				</ul>
 			</div>
-			<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
@@ -105,7 +108,7 @@
 	
 		
 	
-			<div data-role="page" id="additem" data-add-back-btn="true" data-theme="e">
+			<div data-role="page" id="additem" data-add-back-btn="true" data-theme="a">
 				<div data-role="header" data-position="fixed" data-theme="a">
 					<h1>Create Task</h1>
 				</div>
@@ -114,7 +117,7 @@
 					<div data-role="button" id="displayTask" data-inline="true" data-icon="star" data-iconpos="right" data-theme="e">Display Tasks</div>
 				</div>
 				
-			<div data-role="content">
+			<div data-role="content" data-theme="a">
 				<form action="" method="post" id="taskForm" name="taskForm">
 					<fieldset data-role="controlgroup" data-mini="true">
 						<legend>Add a Task</legend>
@@ -145,7 +148,7 @@
 								</optgroup>
 							</select>-->
 					</fieldset>
-					<div data-role="fieldcontain">
+					<div data-role="fieldcontain" data-theme="a">
 						<ul>
 							<fieldset data-role="controlgroup" data-mini="true">
 								<li>
@@ -159,25 +162,25 @@
 							</fieldset>
 						</ul>
 					</div>
-					<div data-role="fieldcontain">
+					<div data-role="fieldcontain" data-theme="a">
 						<ul>
 							Grade Level:<ul><input type="range" name="range1" min="0" max="12" step="1" value="6" id="grade"/></ul>
 						</ul>
 					</div>
-					<div data role="fieldcontain">
+					<div data role="fieldcontain" data-theme="a">
 						<ul>
 							<label for="categories">Task Categories:</label>
 							<ul><name="categories" id="categories" data-inline="true" data-native-menu="false"></ul>
 						</ul>
 					</div>
-					<div data-role="fieldcontain">
+					<div data-role="fieldcontain" data-theme="a">
 						<ul>
 							<fieldset data-role="controlgroup" data-mini="true">
 								<label for="dueDate">Due Date:</label><ul><input type="date" id="dueDate" class="required" name="Due Date" placeholder="MM/DD/YYYY"/></ul>
 							</fieldset>
 						</ul>	
 					</div>
-					<div data-role="fieldcontain">
+					<div data-role="fieldcontain" data-theme="a">
 						<ul>
 							<fieldset data-role="controlgroup" data-mini="true">
 								<label for="comments">My Notes:</label><ul><textarea id="comments" placeholder="Additional Notes"></textarea></ul>
@@ -189,11 +192,11 @@
 					<a href="#home" data-inline="true" data-role="button" data-theme="w" data-icon="delete">Cancel</a>
 				</form>
 			</div>
-				<div id="itemList" data-role="fieldcontain"></div>
+				<div id="itemList" data-role="fieldcontain" data-theme="a"></div>
 
 			
 			
-			<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
@@ -212,7 +215,7 @@
 		
 		
 		
-	<div data-role="page" id="about" data-add-back-btn="true" data-theme="e">
+	<div data-role="page" id="about" data-add-back-btn="true" data-theme="a">
 		<div data-role="header" data-position="fixed" data-theme="a">
 			<h1>About The App</h1>
 		</div>
@@ -277,7 +280,7 @@
 				<img height="180" width="280" src="images/nieves.jpg">
 			</div>
 			</p>
-			<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-ajax="false" data-icon="home" >Home</a></li>
@@ -299,12 +302,12 @@
 		
 		
 		
-		<div data-role="page" id="error" data-add-back-btn="true" data-theme="e">
-			<div data-role="header" data-position="fixed">
+		<div data-role="page" id="error" data-theme="a" data-add-back-btn="true">
+			<div data-role="header">
 				<h1>Error Page</h1>
 			</div>
 			<img src="images/ID-10051607.jpg">
-			<div data-role="footer" data-position="fixed" data-theme="a">
+			<div data-role="footer" data-position="fixed" data-theme="b">
 				<div data-role="navbar">
 					<ul>
 						<li><a href="#home" data-icon="home">Home</a></li>
@@ -319,10 +322,7 @@
 		
 		
 		
-		
-		
-		
-		<div data-role="page" id="grade" data-add-back-btn="true" data-theme="e">
+		<div data-role="page" id="grade" data-add-back-btn="true" data-theme="a">
 			<div data-role="header">
 				<h1>Grade Papers</h1>
 			</div>
@@ -382,7 +382,7 @@
 							</ul>
 						</p>
 					</div>
-					<div data-role="footer" data-position="fixed" data-theme="a">
+					<div data-role="footer" data-position="fixed" data-theme="b">
 						<div data-role="navbar">
 							<ul>
 								<li><a href="#home" data-icon="home">Home</a></li>
